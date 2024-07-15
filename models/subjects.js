@@ -5,7 +5,7 @@ subjects.init({
     primaryKey: true,
     autoIncrement: true,
   },
-  type: {
+  name: {
     type: DataTypes.VARCHAR,
     allowNull: false,
   },
