@@ -1,8 +1,35 @@
-{{#extend "layouts/main"}}
-    {{#content "body"}}
-        <div class="container">
-            <h2>Our Tutors</h2>
-            <!-- Tutors listing or content -->
-        </div>
-    {{/content}}
-{{/extend}}
+<!-- views/tutors.handlebars -->
+
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Tutors</title>
+    <link rel='stylesheet' href='/css/styles.css' />
+  </head>
+  <body>
+    <header>
+      <h1>Available Tutors</h1>
+      {{#if logged_in}}
+        <a href='/profile'>Profile</a>
+        <button id='logout'>Logout</button>
+      {{else}}
+        <a href='/login'>Login</a>
+      {{/if}}
+    </header>
+
+    <main>
+      <ul>
+        {{#each tutors}}
+          <li>
+            <h2>{{this.name}}</h2>
+            <p>Subject: {{this.subject}}</p>
+            <p>Description: {{this.description}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    </main>
+
+    <script src='/js/logout.js'></script>
+  </body>
+</html>
