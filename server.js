@@ -16,7 +16,7 @@ const sess = {
   secret: 'Excalibur',
   cookie: {
     // Stored in milliseconds
-    maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
+    maxAge: 60 * 60 * 1000, // expires after 1 hour
   },
   resave: false,
   saveUninitialized: true,
