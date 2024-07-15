@@ -1,4 +1,4 @@
-roles.init({
+subjects.init({
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -10,4 +10,4 @@ roles.init({
     allowNull: false,
   },
 });
-module.exports = roles;
+module.exports = subjects;
