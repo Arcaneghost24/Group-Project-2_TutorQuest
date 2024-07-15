@@ -20,7 +20,8 @@
     "express-session": "^1.17.1",
     "node-gyp": "^10.2.0",
     "pg": "^8.11.3",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.37.3",
+    "sequelize-cli": "^6.6.2"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
