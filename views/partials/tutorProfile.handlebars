@@ -1,4 +1,4 @@
-<script id="tutor-profile-template" type="text/x-handlebars-template">
+<div class="container profile-container">
     <div class="row profile-header align-items-center">
         <div class="col-md-2">
             <img src="{{profilePicture}}" alt="Profile Picture" class="img-fluid rounded-circle">
@@ -48,3 +48,29 @@
             <p>{{messages}}</p>
         </div>
     </div>
+
+    <div class="section resources">
+        <h2>Resources</h2>
+        <div class="resources-content">
+            <p>Uploaded Resources:</p>
+            <ul class="list-group">
+                {{#each uploadedResources}}
+                <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="section payment-info">
+        <h2>Payment Information</h2>
+        <div class="payments-content">
+            <p>Payment History:</p>
+            <ul class="list-group">
+                {{#each paymentHistory}}
+                <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+            <p>Payout Methods: {{payoutMethods}}</p>
+        </div>
+    </div>
+</div>
