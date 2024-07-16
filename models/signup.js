@@ -13,6 +13,8 @@ document.querySelector('#signup-form').addEventListener('submit', async (event) 
       body: JSON.stringify({ name, email, password, userType }),
       headers: { 'Content-Type': 'application/json' },
     });
-    
+
     if (response.ok) {
         document.location.replace('/profile');
+    } else {
+        alert('Failed to sign up.');
