@@ -9,3 +9,7 @@ document.querySelector('#signup-form').addEventListener('submit', async (event) 
 
     if (name && email && password && userType) {
         const response = await fetch('/api/users/signup', {
+            method: 'POST',
+      body: JSON.stringify({ name, email, password, userType }),
+      headers: { 'Content-Type': 'application/json' },
+    });
