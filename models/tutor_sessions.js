@@ -11,14 +11,14 @@ tutor_sessions.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    student_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'students',
-        key: 'id',
-      },
-    },
+    // student_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'students',
+    //     key: 'id',
+    //   },
+    // },
     tutor_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
