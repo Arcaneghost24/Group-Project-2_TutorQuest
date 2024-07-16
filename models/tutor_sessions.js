@@ -1,7 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const Student_id = require('./User');
-const Tutor_id = require('./User');
 
 class tutor_sessions extends Model {}
 
