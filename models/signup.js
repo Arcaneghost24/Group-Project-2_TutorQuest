@@ -6,3 +6,6 @@ document.querySelector('#signup-form').addEventListener('submit', async (event) 
     const email = document.querySelector('#email').value.trim();
     const password = document.querySelector('#password').value.trim();
     const userType = document.querySelector('#userType').value;
+
+    if (name && email && password && userType) {
+        const response = await fetch('/api/users/signup', {
