@@ -1,40 +1,39 @@
 <!-- views/users.handlebars -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Users</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-  <header>
-    <h1>Registered Users</h1>
-    {{#if logged_in}}
-      <a href="/profile">Profile</a>
-      <button id="logout">Logout</button>
-    {{else}}
-      <a href="/login">Login</a>
-    {{/if}}
-  </header>
 
-  <main>
-    <ul>
-      {{#each users}}
-        <li>
-          <h2>{{this.name}}</h2>
-          <p>Email: {{this.email}}</p>
-          <p>Subject: {{this.subject}}</p>
-        </li>
-      {{/each}}
-    </ul>
-    <div class="container">
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Users</title>
+    <link rel='stylesheet' href='/css/styles.css' />
+  </head>
+  <body>
+    <header>
+      <h1>Registered Users</h1>
+      {{#if logged_in}}
+        <a href='/profile'>Profile</a>
+        <button id='logout'>Logout</button>
+      {{else}}
+        <a href='/login'>Login</a>
+      {{/if}}
+    </header>
+
+    <main>
+      <ul>
+        {{#each users}}
+          <li>
+            <h2>{{this.name}}</h2>
+            <p>Email: {{this.email}}</p>
+            <p>Subject: {{this.subject}}</p>
+          </li>
+        {{/each}}
+      </ul>
+      <div class='container'>
         <h2>User Profile</h2>
         <!-- User profile information or content -->
-    </div>
-  </main>
+      </div>
+    </main>
 
-  <script src="/js/logout.js"></script>
-</body>
+    <script src='/js/logout.js'></script>
+  </body>
 </html>
-
