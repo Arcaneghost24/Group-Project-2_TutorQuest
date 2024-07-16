@@ -1,0 +1,71 @@
+<script id="student-profile-template" type="text/x-handlebars-template">
+    <div class="row profile-header align-items-center">
+        <div class="col-md-2">
+            <img src="{{profilePicture}}" alt="Profile Picture" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-10 profile-details">
+            <h1>{{name}}</h1>
+            <p>Age: {{age}}</p>
+            <p>Grade: {{grade}}</p>
+            <p>Location: {{location}}</p>
+        </div>
+    </div>
+
+    <div class="section academic-info">
+        <h2>Academic Information</h2>
+        <p>Current Subjects: {{currentSubjects}}</p>
+        <p>Academic Goals: {{academicGoals}}</p>
+    </div>
+
+    <div class="section tutoring-preferences">
+        <h2>Tutoring Preferences</h2>
+        <p>Preferred Subjects: {{preferredSubjects}}</p>
+        <p>Preferred Time: {{preferredTime}}</p>
+        <p>Mode of Tutoring: {{modeOfTutoring}}</p>
+    </div>
+
+    <div class="section schedule">
+        <h2>Schedule</h2>
+        <div class="schedule-content">
+            <p>Upcoming Sessions:</p>
+            <ul class="list-group">
+                {{#each upcomingSessions}}
+                <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+            <p>Past Sessions with Feedback:</p>
+            <ul class="list-group">
+                {{#each pastSessions}}
+                <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="section messages">
+        <h2>Messages</h2>
+        <div class="messages-content">
+            <p>{{messages}}</p>
+        </div>
+    </div>
+
+    <div class="section notes-resources">
+        <h2>Notes and Resources</h2>
+        <div class="resources-content">
+            <p>{{notesResources}}</p>
+        </div>
+    </div>
+
+    <div class="section payment-info">
+        <h2>Payment Information</h2>
+        <div class="payments-content">
+            <p>Payment History:</p>
+            <ul class="list-group">
+                {{#each paymentHistory}}
+                <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+            <p>Payment Methods: {{paymentMethods}}</p>
+        </div>
+    </div>
+</script>
