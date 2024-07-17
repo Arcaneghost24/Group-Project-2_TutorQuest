@@ -1,13 +1,11 @@
 [
   {
-    "id": "1",
     "name": "Ben",
     "subject": "Math",
     "description": "I need help with calc 2 (too many totchos",
     "user_id": "1234"
   },
   {
-    "id": "2",
     "name": "Max",
     "subject": "History",
     "description": "I need help with understanding much of a baller Teddy Rosevelt was",
