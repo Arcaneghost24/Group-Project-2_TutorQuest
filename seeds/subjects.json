@@ -1,22 +1,17 @@
 [
   {
-    "id": "1",
     "name": "Math"
   },
   {
-    "id": "2",
     "name": "Writing"
   },
   {
-    "id": "3",
     "name": "Reading"
   },
   {
-    "id": "4",
     "name": "Science"
   },
   {
-    "id": "5",
     "name": "History"
   }
 ]

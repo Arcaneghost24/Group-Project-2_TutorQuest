@@ -30,6 +30,7 @@ Tutor.init(
         key: 'id',
       },
     },
+    
   },
   {
     sequelize,

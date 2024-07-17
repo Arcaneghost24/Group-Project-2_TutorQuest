@@ -35,6 +35,11 @@ User.init(
         len: [8],
       },
     },
+    roletype: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      foreignKey:true,
+    },
   },
   {
     hooks: {
