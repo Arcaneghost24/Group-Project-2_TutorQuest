@@ -12,8 +12,8 @@ Role.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    role_name: {
-      type: DataTypes.STRING,
+    role_type: {
+      type: DataTypes.VARCHAR,
       allowNull: false,
     },
   },
