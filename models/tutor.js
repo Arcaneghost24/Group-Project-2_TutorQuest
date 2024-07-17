@@ -36,7 +36,7 @@ Tutor.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'tutor',
+    modelName: 'tutors',
   }
 );
 
