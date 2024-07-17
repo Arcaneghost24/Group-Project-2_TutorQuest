@@ -44,4 +44,8 @@ router.post('/logout', (req, res) => {
   }
 });
 
+router.get('/api/student_display', (req, res) => {
+  res.send('/seeds/students');
+});
+
 module.exports = router;
