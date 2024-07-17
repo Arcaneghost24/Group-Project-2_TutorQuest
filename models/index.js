@@ -1,5 +1,5 @@
 const User = require('./User');
-// const Student = require('./Student');
+const Student = require('./Student');
 const Tutor = require('./Tutor');
 const TutorSessions = require('./tutor_sessions');
 
@@ -9,6 +9,8 @@ Tutor.hasMany(TutorSessions, { foreignKey: 'tutor_id' });
 TutorSessions.belongsTo(Tutor, { foreignKey: 'tutor_id' });
 
 Tutor.belongsTo(User,{foreignKey:'roletype'})
+
+Student.belongsTo(User,{foreignKey:'roletype'})
 
 module.exports = { Tutor, TutorSessions };
 module.exports = { User };
