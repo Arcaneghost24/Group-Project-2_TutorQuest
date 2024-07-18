@@ -66,7 +66,22 @@ Tutor.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    
+    messages: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    uploadedResources: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    paymentHistory: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    payoutMethods: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
   },
   {
     sequelize,
