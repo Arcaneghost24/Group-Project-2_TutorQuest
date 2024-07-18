@@ -30,6 +30,10 @@ Tutor.init(
         key: 'id',
       },
     },
+    experience: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
     
   },
   {
