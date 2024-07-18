@@ -4,9 +4,9 @@ const TutorSession = require('./Tutor_session');
 const Role = require('./Role');
 
 User.hasOne(Role, { as: 'role' });
-User.hasMany(TutorSession, { foreignKey: 'user_id' });
+// User.hasMany(TutorSession, { foreignKey: 'user_id' });
 
-TutorSession.belongsTo(User, { foreignKey: 'user_id' });
+// TutorSession.belongsTo(User, { foreignKey: 'user_id' });
 
 Subject.belongsToMany(User, {
   through: {
