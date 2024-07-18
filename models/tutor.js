@@ -34,7 +34,10 @@ Tutor.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    
+    location: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
   },
   {
     sequelize,
