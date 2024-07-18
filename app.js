@@ -1,15 +1,20 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const routes = require('./controllers');
+const sequelize = require('./config/connection');
 
 dotenv.config();
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use(routes);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
 });
