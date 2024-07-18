@@ -1,14 +1,31 @@
-[
-  {
-    "name": "Ben",
-    "subject": "Math",
-    "description": "I need help with calc 2 (too many totchos",
-    "user_id": "1234"
-  },
-  {
-    "name": "Max",
-    "subject": "History",
-    "description": "I need help with understanding much of a baller Teddy Rosevelt was",
-    "user_id": "4321"
-  }
-]
+{
+  "students": [
+    {
+      "profilePicture": "path/to/profile-picture.jpg",
+      "name": "John Doe",
+      "age": 16,
+      "grade": "11th Grade",
+      "location": "New York, NY",
+      "currentSubjects": "Math, Science, History",
+      "academicGoals": "Improve math skills, get an A in Science",
+      "preferredSubjects": "Math, Physics",
+      "preferredTime": "Afternoon",
+      "modeOfTutoring": "Online",
+      "upcomingSessions": [
+        "Math tutoring with Mr. Smith on July 20th",
+        "Science tutoring with Ms. Johnson on July 22nd"
+      ],
+      "pastSessions": [
+        "Math tutoring with Mr. Smith on July 10th - Feedback: Excellent session, very helpful",
+        "Science tutoring with Ms. Johnson on July 15th - Feedback: Great explanations, understood the topic well"
+      ],
+      "messages": "No new messages",
+      "notesResources": "Link to Math practice problems, Science project guidelines",
+      "paymentHistory": [
+        "Payment on July 1st: $50",
+        "Payment on July 15th: $45"
+      ],
+      "paymentMethods": "Credit Card, PayPal"
+    }
+  ]
+}
