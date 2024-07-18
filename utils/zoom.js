@@ -12,7 +12,7 @@ const zoomUserId = process.env.ZOOM_USER_ID; // The Zoom user ID for the tutor
 function generateJwtToken() {
   const payload = {
     iss: zoomApiKey,
-    exp: ((new Date()).getTime() + 5000),
+    exp: new Date().getTime() + 5000,
   };
 
   return jwt.sign(payload, zoomApiSecret);
@@ -57,7 +57,7 @@ async function generateZoomLink(tutorId, sessionId) {
     payload,
     {
       headers: {
-        'Authorization': `Bearer ${generateJwtToken()}`,
+        Authorization: `Bearer ${generateJwtToken()}`,
         'Content-Type': 'application/json',
       },
     }
@@ -70,7 +70,11 @@ async function generateZoomLink(tutorId, sessionId) {
 async function sendZoomLink(studentEmail, tutorId, sessionId) {
   const zoomLink = await generateZoomLink(tutorId, sessionId);
 
-  await sendEmail(studentEmail, 'Your Tutoring Session Zoom Link', `Here is your Zoom link for the session: ${zoomLink}`);
+  await sendEmail(
+    studentEmail,
+    'Your Tutoring Session Zoom Link',
+    `Here is your Zoom link for the session: ${zoomLink}`
+  );
 
   return zoomLink;
 }

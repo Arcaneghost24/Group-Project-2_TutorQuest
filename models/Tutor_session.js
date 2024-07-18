@@ -38,7 +38,7 @@ Tutoring_session.init(
   },
   {
     sequelize,
-    modelName: 'tutor_sessions',
+    modelName: 'tutor_session',
   }
 );
 
