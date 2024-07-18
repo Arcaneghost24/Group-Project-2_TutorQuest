@@ -35,10 +35,10 @@ User.init(
         len: [8],
       },
     },
-    roletype: {
-      type: DataTypes.STRING,
+    role: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      foreignKey:true,
+      foreignKey: true,
     },
   },
   {

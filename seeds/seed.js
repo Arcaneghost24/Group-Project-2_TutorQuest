@@ -1,7 +1,8 @@
 const sequelize = require('../config/connection');
-const { User } = require('../models');
+const { User, Subject } = require('../models');
 
 const userData = require('./userData.json');
+const subjectData = require('./subjects.json');
 
 const seedDatabase = async () => {
   try {
@@ -13,8 +14,10 @@ const seedDatabase = async () => {
     });
     console.log('users', users);
 
-    // await roles();
-    // await subjects();
+    const subjects = await Subject.bulkCreate(subjectData, {
+      returning: true,
+    });
+    console.log('subjects', subjects);
     process.exit(0);
   } catch (err) {
     console.error(err);
