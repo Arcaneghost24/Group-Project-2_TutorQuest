@@ -31,7 +31,7 @@ Tutoring_session.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'subjects',
+        model: 'subject',
         key: 'id',
       },
     },

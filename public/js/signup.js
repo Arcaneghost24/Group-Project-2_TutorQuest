@@ -7,7 +7,7 @@ const newFormHandler = async (event) => {
   const role = document.querySelector('#userType');
 
   if (name && email && password && role) {
-    const response = await fetch('/api/projects', {
+    const response = await fetch('/api/users/new', {
       method: 'POST',
       body: JSON.stringify({ name, email, password, role }),
       headers: {
