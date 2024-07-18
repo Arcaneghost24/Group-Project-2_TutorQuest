@@ -1,16 +1,20 @@
 const User = require('./User');
-const Student = require('./Student');
-const Tutor = require('./Tutor');
-const TutorSessions = require('./tutor_sessions');
+const Subject = require('./Subject');
+const TutorSession = require('./Tutor_session');
+const Role = require('./Role');
 
-// Student.hasMany(TutorSessions, { foreignKey: 'student_id' });
-Tutor.hasMany(TutorSessions, { foreignKey: 'tutor_id' });
-// TutorSessions.belongsTo(Student, { foreignKey: 'student_id' });
-TutorSessions.belongsTo(Tutor, { foreignKey: 'tutor_id' });
+User.hasOne(Role, { as: 'role' });
+User.hasMany(TutorSession, { foreignKey: 'user_id' });
 
-Tutor.belongsTo(User,{foreignKey:'roletype'})
+TutorSession.belongsTo(User, { foreignKey: 'user_id' });
 
-Student.belongsTo(User,{foreignKey:'roletype'})
+Subject.belongsToMany(User, {
+  through: {
+    model: TutorSession,
+  },
+});
 
-module.exports = { Tutor, TutorSessions };
-module.exports = { User };
+// Tutor.belongsTo(User, { foreignKey: 'roletype' });
+// Student.belongsTo(User, { foreignKey: 'roletype' });
+
+module.exports = { User, Subject, TutorSession };

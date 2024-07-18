@@ -1,7 +1,7 @@
 <div class='container'>
   <h2>Sign Up</h2>
-  <form action='/signup' method='POST'>
-    <div class='form-group'>
+  <form action='/api/users/new' method='POST'>
+    {{!-- <div class='form-group'>
       <label for='fullName'>Full Name</label>
       <input
         type='text'
@@ -37,11 +37,39 @@
     <div class='form-group'>
       <label for='userType'>Sign up as:</label>
       <select class='form-control' id='userType' name='userType' required>
-        <option value='' selected disabled>Select user type</option>
+        <option value='selected disabled'>Select user type</option>
         <option value='student'>Student</option>
         <option value='tutor'>Tutor</option>
       </select>
     </div>
-    <button type='submit' class='btn btn-primary'>Sign Up</button>
+    <button type='submit' class='btn btn-primary'>Sign Up</button> --}}
+    <div class="row mt-4">
+  <div class="col-md-6">
+    <form class="form new-user-form">
+      <div class="form-group">
+        <label for="user-name">Name:</label>
+        <input class="form-input" type="text" id="user-name" name="user-name" />
+      </div>
+      <div class="form-group">
+        <label for="user-email">Email:</label>
+        <input class="form-input" type="number" id="user-email" name="user-email" />
+      </div>
+      <div class="form-group">
+        <label for="user-password">Password:</label>
+        <textarea class="form-input" id="user-password" name="user-password"></textarea>
+      </div>
+      <div class='form-group'>
+      <label for='userType'>Sign up as:</label>
+      <select class='form-control' id='userType' name='userType' required>
+        <option value='selected disabled'>Select user type</option>
+        <option value="1">Student</option>
+        <option value="2">Tutor</option>
+      </select>
+    </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
   </form>
 </div>

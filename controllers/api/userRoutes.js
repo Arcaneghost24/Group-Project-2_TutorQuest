@@ -44,9 +44,21 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// Creation of new user
+router.post('/new', async (req, res) => {
+  try {
+    const newUser = await User.create({
+      ...req.body,
+    });
 
-router.get('/api/student_display', (req, res) => {
-  res.seed('/seeds/students.json');
+    res.status(200).json(newUser);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.get('/student_display', (req, res) => {
+  res.json('/seeds/students.json');
 });
 
 module.exports = router;
