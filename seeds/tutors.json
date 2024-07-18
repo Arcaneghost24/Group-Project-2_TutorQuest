@@ -1,15 +1,27 @@
-[
-  {
-    "name": "JeffMichael",
-    "subject": "Math",
-    "desctription": "calc 2 (no tatchos)",
-    "user_id": "12345"
-
-  },
-  {
-    "name": "Amir",
-    "subject": "History",
-    "desctription": "U.S history, Teddy Roosevelt was a baller",
-    "user_id": "54321"
-  }
-]
+{
+  "students": [
+    {
+      "profilePicture": "path/to/profile-picture.jpg",
+      "name": "John Smith",
+      "subjects":"Math, Science, History",
+      "description":"Looking for someone to teach",
+      "experience":"6 years of tutoring",
+      "location": "New York NY",
+      "qualifications":"Masters in Math and a bachelor's degree in science",
+      "availability" :"everyday 12PM to 5PM",
+      "preferredAgeGroups":"Highschool to collage level",
+      "hourlyRate":"$15",
+      "modeOfTutoring":"focused",
+      "upcomingSessions":"Science tutoring with jimmy on May Friday the 13th",
+      "pastSessions":"Math tutoring with Mary on the July 7th",
+      "messages":"No new messages",
+      "uploadedResources":"Link to history books",
+      "paymentHistory": 
+      [
+        "Payment on May Thursday the 12th",
+        "Payment on July 6th"
+      ],
+      "payoutMethods": "Credit Card, Paypal, Zelle"
+    }
+  ]
+}
