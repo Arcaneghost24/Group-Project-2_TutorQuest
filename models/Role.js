@@ -13,7 +13,7 @@ Role.init(
       autoIncrement: true,
     },
     role_type: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
