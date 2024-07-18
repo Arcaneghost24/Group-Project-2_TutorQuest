@@ -3,7 +3,14 @@
     {
       "profilePicture": "path/to/profile-picture.jpg",
       "name": "John Smith",
-      
+      "subjects":"Math, Science, History",
+      "description":"Looking for someone to teach",
+      "experience":"6 years of tutoring",
+      "location": "New York NY",
+      "qualifications":"Masters in Math and a bachelor's degree in science",
+      "availability" :"everyday 12PM to 5PM",
+      "preferredAgeGroups":"Highschool to collage level",
+      "hourlyRate":"$15"
     }
   ]
 }
